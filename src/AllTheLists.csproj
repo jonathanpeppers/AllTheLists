@@ -43,10 +43,11 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
-	<!-- <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
-		<AndroidEnableLLVM>false</AndroidEnableLLVM>
-    	<AndroidEnableLLVMOptimizations>false</AndroidEnableLLVMOptimizations>
-	</PropertyGroup> -->
+	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+		<RuntimeIdentifier>android-arm64</RuntimeIdentifier>
+		<AndroidEnableProfiler>true</AndroidEnableProfiler>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
 
 <!-- <PropertyGroup Condition="'$(Configuration)' == 'Release' And '$(TargetFramework)' == 'net8.0-android'">
 	<TrimMode>Full</TrimMode>
@@ -90,7 +91,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0-preview.5.24306.7" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Redth.Maui.VirtualListView" Version="0.4.0" />
 		<PackageReference Include="MPowerKit.VirtualizeListView" Version="1.1.1" />
 		<PackageReference Include="FFImageLoading.Maui" Version="1.2.5" />
