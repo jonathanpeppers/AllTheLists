@@ -97,7 +97,6 @@
 		<PackageReference Include="FFImageLoading.Maui" Version="1.2.5" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="9.0.1" />
-		<PackageReference Include="pankaj.util.RatingControl" Version="1.0.0.2" />
 		<PackageReference Include="AlohaKit.Layouts" Version="1.0.0" />
 		<PackageReference Include="The49.Maui.BottomSheet" Version="8.0.3" />
 	</ItemGroup>

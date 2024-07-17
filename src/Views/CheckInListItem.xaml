@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:m="clr-namespace:AllTheLists.Models"
              xmlns:f="clr-namespace:Fonts"
-             xmlns:rc="http://www.pankaj_singh_apps.de/maui/controls"
              xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:DataType="m:CheckIn"
              x:Class="AllTheLists.Views.CheckInListItem">
@@ -83,10 +82,9 @@
                             <!-- Assuming you have a custom control or method for displaying ratings -->
                             <!-- <RatingControl Rating="{Binding Rating}" /> -->
                             
-                            <rc:RatingControl Amount="5" 
-                                                    CurrentValue="{Binding Rating}" 
-                                                    AccentColor="Gold" 
-                                                    FontSize="24"/>
+                            <Label Text="{Binding Rating}"
+                                TextColor="Gold"
+                                FontSize="24"/>
                             <Label Text="{Binding Rating, StringFormat='{}{0:F2}'}" VerticalOptions="Center" Margin="10,0,0,0" />
                         </HorizontalStackLayout>
 

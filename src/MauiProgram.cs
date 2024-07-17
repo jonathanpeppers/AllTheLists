@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Logging;
 using MPowerKit.VirtualizeListView;
 using CommunityToolkit.Maui;
-using RatingControlMaui;
 using AlohaKit.Layouts.Hosting;
 using Effects;
 using The49.Maui.BottomSheet;
@@ -19,8 +18,7 @@ public static class MauiProgram
 			.UseMauiCommunityToolkit()
 			.UseVirtualListView()
 			.UseMPowerKitListView()
-			.UseFFImageLoading()		
-			.UseRatingControl()	
+			.UseFFImageLoading()
 			.UseAlohaKitLayouts()
 			.UseBottomSheet()
 			.ConfigureFonts(fonts =>
